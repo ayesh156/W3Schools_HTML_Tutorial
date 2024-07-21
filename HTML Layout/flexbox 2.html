@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout using flexbox 2</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .flex-container > * {
+            padding: 10px;
+            flex: 1 100%;
+        }
+
+        .main {
+            text-align: left;
+            background: cornflowerblue;
+        }
+
+        .header {background: coral;}
+        .aside {background: moccasin;}
+        .footer {background: lightgreen;}
+
+        @media all and (min-width: 768px) {
+            .aside {
+                flex: 1 auto;
+                order: 1;
+            }
+            .main {
+                flex: 3 0px;
+                order: 2;
+            }
+            .footer {
+                order: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header class="header">Header</header>
+        <aside class="aside">Aside</aside>
+        <article class="main">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius impedit culpa blanditiis corporis est odit cupiditate? Ipsa, praesentium aut, tenetur accusantium esse laborum ad natus, consequatur sint facere optio sequi odio velit nulla. Porro error non facere necessitatibus cumque illum!
+        </article>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+
+</html>

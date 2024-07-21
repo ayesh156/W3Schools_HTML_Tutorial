@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout using flexbox 3</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .flex-container > * {
+            padding: 10px;
+            flex: 1 100%;
+        }
+
+        .main {
+            text-align: left;
+            background: cornflowerblue;
+        }
+
+        .header {background: coral;}
+        .aside1 {background: moccasin;}
+        .aside2 {background: violet;}
+        .footer {background: lightgreen;}
+
+        @media all and (min-width: 768px) {
+            .aside {
+                flex: 1 auto;
+            }
+            .main {
+                flex: 3 0px;
+                order: 2;
+            }
+            .aside1 {
+                order: 1;
+            }
+            .aside2 {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header class="header">Header</header>
+        <aside class="aside aside1">Aside 1</aside>
+        <article class="main">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint laborum animi ab ducimus ut. Officiis magni exercitationem dicta molestias nihil, similique voluptatibus. Laborum, provident officiis, ullam voluptatem dolore repudiandae tempore distinctio autem soluta, reiciendis fugit alias maxime delectus earum error?</p>
+        </article>
+        <aside class="aside aside2">Aside 2</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

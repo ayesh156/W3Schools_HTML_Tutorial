@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+    <style>
+        #menu li {
+            display: inline;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            padding: 16px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Lists</h1>
+
+    <h2>An unordered list (default)</h2>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <h2>An unorderd list with disc bullets</h2>
+
+    <ul style="list-style-type: disc;">
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <h2>An unordered list with circle bullets</h2>
+
+    <ul style="list-style-type: circle;">
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    
+    <h2>An unordered list with square bullets</h2>
+
+   <ul style="list-style-type: square;">
+       <li>Coffee</li>
+       <li>Milk</li>
+       <li>Tea</li>
+   </ul>
+    
+    <h2>An unordered list without bullets</h2>
+
+    <ul style="list-style-type: none;">
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    
+    <h2>An ordered list (default)</h2>
+
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h2>An ordered list with numbers</h2>
+    
+    <ol type="1">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h2>An ordered list with letters</h2>
+
+    <ol type="A">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    
+    <h2>An ordered list with lowercase letters</h2>
+
+    <ol type="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h2>An ordered list with roman numbers</h2>
+
+    <ol type="I">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h2>An ordered list with lowercase roman numbers</h2>
+
+    <ol type="i">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h2>A description list</h2>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>white cold drink</dd>
+    </dl>
+
+    <h2>A nested list I</h2>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea
+            <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+    
+    <h2>A nested list II</h2>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea
+            <ul>
+                <li>Black tea</li>
+                <li>White tea
+                    <ul>
+                        <li>China</li>
+                        <li>Africa</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+
+    <h2>A horizontal list</h2>
+
+    <ul id="menu">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+    </ul>
+
+    <h2>A horizontal list menu</h2>
+
+    <p>We use CSS to style the list horizontally, to create a navigation menu:</p>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+</body>
+</html>

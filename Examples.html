@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Examples</title>
+
+    <!-- Style all elements with a specified class name -->
+    <!-- <style>
+        .city {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style> -->
+    
+    <!-- Access elements with a specified class name, with (div). -->
+    <!-- <style>
+        .cities {
+            background-color: tomato;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style> -->
+
+    <!-- Multiple classes -->
+    <!-- <style>
+        .city3 {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+        .main {
+            text-align: center;
+        }
+    </style> -->
+
+    <!-- Same class, different tag -->
+    <!-- <style>
+        .city2 {
+            background-color: tomato;
+            color: white;
+            padding: 20px;
+        }
+    </style> -->
+
+    <!-- >Style an element with a specific id -->
+    <style>
+        #myHeader {
+            background-color: lightblue;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>HTML Basic</h1>
+
+    <h2>HTML document</h2>
+
+    <h3>My first heading</h3>
+    <p>My first paragraph</p>
+
+    <h2>HTML heading</h2>
+
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>
+
+    <h2>HTML paragraphs</h2>
+
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+
+    <h2>HTML links</h2>
+
+    <p>HTML link are difined with the a tag:</p>
+    <a href="https://www.w3schools.com">This is link</a>
+
+    <h2>HTML images</h2>
+
+    <p>HTML images are defined with the img tag:</p>
+    <img src="images/w3schools.gif" alt="W3Schools" width="104" height="142">
+
+    <h2>HTML buttons</h2>
+
+    <p>HTML buttons are difined with the button tag:</p>
+    <button>Click me</button>
+
+    <h2>HTML lists</h2>
+
+    <h3>An unordered html list</h3>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    
+    <h3>An ordered html list</h3>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h1>HTML Attributes</h1>
+
+    <h2>The title attribute</h2>
+
+    <h3 title="I'm title">The title attribute</h3>
+    <p title="I'm tooltip">Mouse over this paragraph, to display the title attribute as a tooltip</p>
+
+    <h2>The href attribute</h2>
+
+    <p>HTML links are difined with the a tag. The link address is specified in the href attribute</p>
+
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+
+    <h2>The width and height attributes</h2>
+
+    <p>The width and height attributes of the img tag, defines the width and height of the image:</p>
+    <img src="images/w3schools.gif" width="104" height="142" alt="">
+
+    <h2>The alt attribute</h2>
+
+    <p>The alt attribute should reflect the image content, so users who cannot see the image gets an understanding of what the image contains:</p>
+    <img src="images/w3school.gif" alt="W3Schools" width="104" height="142">
+
+    <h2>Attribute without quoutes</h2>
+
+    <a href=https://www.w3schools.com>This is link</a>
+
+    <h2>Attribute without quotes does not work</h2>
+
+    <p title=About W3Schools>You cannot omit quotes around an attribute value if the value contains spaces</p>
+
+    <p><b>If you move the mouse over the paragraph above, your browser will only display the first word from the title</b></p>
+
+    <h1>HTML heading</h1>
+
+    <h2>HTML horizontal rules</h2>
+
+    <h1>This is heading 1</h1>
+    <p>This is some text</p>
+    <hr>
+
+    <h2>This is heading 2</h2>
+    <p>This is some other text</p>
+    <hr>
+
+    <h3>This is heading 3</h3>
+    <p>This is some other text</p>
+
+    <h2>HTML head</h2>
+
+    <p>The HTML head element contains meta data.</p>
+    <p>Meta data is data about the HTML document</p>
+
+    <h1>HTML Paragraphs</h1>
+
+    <h2>HTML paragraphs</h2>
+
+    <p>This is paragraph</p>
+    <p>This is another paragraph</p>
+
+    <h2>More HTML paragraphs</h2>
+
+    <p>
+        This is paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignore it.
+    </p>
+
+    <p>
+        This paragraph
+        contains      a lot of spaces
+        in the source      code,
+        but the     browser
+        ignore it.
+    </p>
+
+    <p>
+        The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+    </p>
+
+    <h2>The use of line breaks in HTML</h2>
+
+    <p>This is <br>a paragraph <br>with line break</p>
+
+    <h2>How to control the line breaks and spaces with the <pre> tag</h2>
+
+    <p>The pre tag preserves both spaces and line breaks.</p>
+
+    <pre>
+        my Bonnie lies over the ocean.
+
+        my Bonnie lies over the sea.
+
+        my Bonnie lies over the ocean.
+
+        Oh bring back my Bonnie to me.
+    </pre>
+
+    <h1>HTML Text Formatting</h1>
+
+    <h2>Bold formatting using the (b) element</h2>
+
+    <p>This text is normal</p>
+
+    <p><b>This text is bold</b></p>
+
+    <h2>Strong formatting using the (strong) element</h2>
+
+    <p>This text is normal</p>
+
+    <p><strong>This text is Important</strong></p>
+
+    <h2>This Italic formatting using the (i) element</h2>
+
+    <p>This text is normal</p>
+
+    <p><i>This text is italic</i></p>
+
+    <h2>Emphasized formatting using the (em) element</h2>
+
+    <p>This text is normal</p>
+
+    <p><em>This text is emphasized</em></p>
+
+    <h2>Small formatting using the (small) element</h2>
+
+    <p>This text is normal</p>
+
+    <p><small>This text is small</small></p>
+
+    <h2>Marked formatting using the (mark) element</h2>
+
+    <p>This text is normal</p>
+
+    <p>Do not buy <mark>milk</mark> today</p>
+
+    <h2>Marked deleted using the (del) element</h2>
+
+    <p>My favorite color is <del>blue</del> red</p>
+
+    <h2>Marked inserted using the (ins) element</h2>
+
+    <p>The ins element represent inserted (added) text.</p>
+
+    <p>My favorite <ins>color</ins> is red</p>
+
+    <h2>Marked deleted and inserted using (del) and (ins)</h2>
+
+    <p>My favorite color is <del>blue</del> <ins>red</ins></p>
+
+    <h2>Subscript formatting using the (sub) element</h2>
+
+    <p>This is <sub>subscripted</sub> text</p>
+
+    <h2>Superscript formatting using the (sup) element</h2>
+
+    <p>This is <sup>superscripted</sup> text</p>
+
+    <h1>HTML Quotations and Citations</h1>
+
+    <h2>Formatting short quotations with the (q) element</h2>
+
+    <p>Browsers usually insert quotation marks around the q element</p>
+
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature</q></p>
+
+    <h2>Formatting quoted sections with the (blockquote) element</h2>
+
+    <p>Browser usually indent blockquote elements</p>
+
+    <blockquote cite="https://www.worldwidelife.org/who/index.html">
+        Fornearly 60 years, WWF has been protecting the future of nature.
+    </blockquote>
+
+    <h2>Formatting document author/owner information with the (address) element</h2>
+
+    <address>
+        Written by John Doe. <br>
+        Visit us at: <br>
+        Example.com <br>
+        Box 564, Disneyland <br>
+        USA
+    </address>
+
+    <h2>Formatting abbreviations and acronyms the (abbr) element</h2>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> founded in 1948</p>
+
+    <p>Marking up abbreviations can give useful information to browsers, translation systems and search-engines</p>
+
+    <h2>Formattion work title with the (cite) element</h2>
+
+    <p>Browsers usually display cite elements in italic</p>
+    <img src="images/img_the_scream.jpg" alt="The scream" width="220" height="277">
+    <p><cite>The scream</cite> by Edvard Munch. Painted in 1893</p>
+
+    <h2>Formatting text direction with the (bdo) element</h2>
+
+    <p>If your browser supports bi-directional override (bdo), the next line will be written from right to left (rtl)</p>
+    <bdo dir="rtl">This line will be written from right to left</bdo>
+
+    <h1>HTML Comments</h1>
+
+    <h2>Hidden comments</h2>
+
+    <!-- This is comment -->
+    <p>This is a paragraph</p>
+    <!-- Comments are not displyed in the screen -->
+
+    <h2>Conditional comments</h2>
+
+    <!-- [if IE 5]>This is IE 5><![endif] -->
+    <!-- [if IE 6]>This is IE 6><![endif] -->
+    <!-- [if IE 7]>This is IE 7><![endif] -->
+    <!-- [if IE 8]>This is IE 8><![endif] -->
+    <!-- [if IE 9]>This is IE 9><![endif] -->
+
+    <h2>Comments for debugging</h2>
+
+    <p>This is a paragraph</p>
+
+    <!--
+    <p>Look at this cool image:</p>
+    <img src="images/img_trulli.jpg" alt="Trulli">
+    -->
+
+    <h1>HTML Block and inline elements</h1>
+
+    <h2>The (div) element</h2>
+
+    <div style="border: 1px solid black;">Hello World</div>
+
+    <p>The DIV element is a block element, and will always start on a new line and take up the full width available (stretches out to the left and right as far as it can).</p>
+
+    <h2>The (span) element</h2>
+
+    <p>This is an inline span <span style="border: 1px solid black;">Hello World</span> element inside a paragraph</p>
+
+    <p>The (span) element is an inline element, and will not start on a new line and only takes up as much width as necessary</p>
+
+    <h2>Styling a (div) element</h2>
+
+    <div style="background-color: black;color: white;padding: 20px;">
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kindom, with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+    </div>
+
+    <h2>Styling a (span) element</h2>
+
+    <p>My mother has <span style="color: blue;font-weight: bold;">blue</span> eyes and My father has <span style="color: darkolivegreen;font-weight: bold;">dark green</span> eyes</p>
+
+    <h1>HTML Classes</h1>
+
+    <h2>Style all elements with a specified class name</h2>
+
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+    </div>
+
+    <h2>Access elements with a specified class name, with (div)</h2>
+
+    <div class="cities">
+        <h2>London</h2>
+        <p>London is the capital city of England</p>
+    </div>
+
+    <div class="cities">
+        <h2>Paris</h2>
+        <p>Paris is the capital city of France</p>
+    </div>
+
+    <div class="cities">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital city of Japan</p>
+    </div>
+
+    <h2>Multiple classes</h2>
+
+    <h3 class="city3 main">London</h3>
+    <h3 class="city3">Paris</h3>
+    <h3 class="city3">Tokyo</h3>
+
+    <h2>Same class, different tag</h2>
+
+    <p>Even if the two elements do not have the same tag, they can both point to the same class, and get the same CSS styling</p>
+
+    <h2 class="city2">Paris</h2>
+    <p class="city2">Paris is the capital city of France</p>
+
+    <h1>HTML Id</h1>
+
+    <h2>Style an element with a specific id</h2>
+
+    <p>Use CSS to style an element with the id "myHeader"</p>
+    <h1 id="myHeader">My Header</h1>
+
+    <h2>Access an element with a specific id, with JavaScript</h2>
+
+    <p>JavaScirpt can access an element with a specified id by using the getElementById() method:</p>
+    <h1 id="myHeader2">Hello World</h1>
+    <button onclick="myFunc()">Change text</button>
+
+    <script>
+        function myFunc() {
+            document.getElementById("myHeader2").innerHTML = "Have a nice day!";
+        }
+    </script>
+
+    <h1>HTML IFrame</h1>
+
+    <h2>Inline frame (a frame inside an HTML page)</h2>
+
+   <iframe src="HTML Layout/flexbox 2.html" title="IFrame" name="iframe" style="border: none;width: 600px;"></iframe>
+
+   <p><a href="HTML Layout/float.html" target="iframe">float</a></p>
+
+   <h1>HTML Computercode Elements</h1>
+
+   <h2>Keyboard input formatting using the (kbd) element</h2>
+
+   <p>The kbd element is define to keyboard input</p>
+
+   <p>Save the document pressing <kbd>Ctrl + S</kbd></p>
+
+   <h2>Computer output formatting using the (samp) element</h2>
+
+   <p>The samp element is used to define output from a computer program.</p>
+
+   <p><samp>File not found. <br>Press F1 to continue</samp></p>
+
+   <h2>Programming code formatting using the (code) element.</h2>
+
+   <p>Programming code example:</p>
+
+   <code>
+       x = 5;
+       y = 6;
+       z = x + y;
+   </code>
+
+   <h2>Programming code formatting preserving whitespace and line-breaks</h2>
+
+   <p>The code element does not preserve whitespace and line-breaks.</p>
+
+   <p>To fix this, you can put code element inside a pre element.</p>
+
+   <pre>
+       <code>
+           x = 5;
+           y = 6;
+           z = x + y;
+       </code>
+   </pre>
+   
+   <h2>Variable formatting using the (var) element</h2>
+
+   <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var> ,where <var>b</var> is the base <var>h</var> is the vartical height.</p>
+
+   
+</body>
+</html>

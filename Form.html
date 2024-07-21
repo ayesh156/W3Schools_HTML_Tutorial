@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <h1>HTML Form</h1>
+    
+   <h2>Form with text input</h2>
+
+   <form action="">
+       <label for="fname">First name:</label><br>
+       <input type="text" name="fname" id="fname" value="Ayesh"><br>
+       <label for="lname">Last name:</label><br>
+       <input type="text" name="lname" id="lname" value="Chathuranga">
+   </form>
+
+   <p>Note that the form itself is not visible.</p>
+
+   <p>Also note that the default width of text input fields is 20 characters.</p>
+
+   <h2>Form with radio button input</h2>
+
+   <p>Choose your favorite web language:</p>
+
+   <form action="">
+       <input type="radio" name="fav_language" id="html" value="HTML">
+       <label for="html">HTML</label><br>
+       <input type="radio" name="fav_language" id="css" value="CSS">
+       <label for="css">CSS</label><br>
+       <input type="radio" name="fav_language" id="javascript" value="JavaScript">
+       <label for="javascript">JavaScript</label>
+   </form>
+
+   <h2>Form with text fields and a submit button</h2>
+
+   <form action="/action_page.php" target="_blank">
+       <label for="fname">First name:</label><br>
+       <input type="text" name="fname" id="fname" value="Ayesh"><br>
+       <label for="lname">Last name:</label><br>
+       <input type="text" name="lname" id="lname" value="Chathuranga"><br><br>
+       <input type="submit" value="Submit">
+   </form>
+
+   <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+   <h2>Form with a text field without a name attribute</h2>
+
+   <form action="/action_page.php">
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" value="Ayesh"><br><br>
+       <input type="submit" value="Submit">
+   </form>
+   
+   <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+   <p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+
+   <h2>Group Form data with Fieldset</h2>
+
+   <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+
+   <form action="/action_page.php">
+       <fieldset>
+           <legend>Personalia:</legend>
+           <label for="fname">First name:</label><br>
+           <input type="text" name="fname" id="fname" value="Ayesh"><br>
+           <label for="lname">Last name:</label><br>
+           <input type="text" name="lname" id="lname" value="Chathuranga"><br><br>
+           <input type="submit" value="Submit">
+       </fieldset>
+   </form>
+
+   <h1>HTML Form Elements</h1>
+
+   <h2>A simple drop-down list</h2>
+
+   <p>The select element defines a drop-down list:</p>
+
+   <form action="">
+       <label for="cars">Choose a car:</label>
+       <select name="cars" id="cars">
+           <option value="volvo">Volvo</option>
+           <option value="fiat">Fiat</option>
+           <option value="saab">Saab</option>
+           <option value="audi">Audi</option>
+       </select>
+   </form>
+
+   <h2>A drop-down list with a pre-selected value</h2>
+
+   <p>You can preselect an option with the selected attribute:</p>
+
+   <form action="">
+       <label for="cars">Choose a car:</label>
+       <select name="cars" id="cars">
+           <option value="volvo">Volvo</option>
+           <option value="saab">Saab</option>
+           <option value="fiat" selected>Fiat</option>
+           <option value="audi">Audi</option>
+       </select>
+   </form>
+
+   <h2>A textarea (a multi-line text input field)</h2>
+
+   <form action="">
+       <textarea name="message" id="" cols="30" rows="10">The cat was playing in the garden.</textarea><br><br>
+       <input type="submit">
+   </form>
+
+   <h2>Using the (datalist) element</h2>
+
+   <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+   <form action="">
+       <input list="browsers" name="browser">
+       <datalist id="browsers">
+           <option value="Internet Explorer"></option>
+           <option value="Safari"></option>
+           <option value="Opera"></option>
+           <option value="Firefox"></option>
+           <option value="Chrome"></option>
+       </datalist>
+       <input type="submit">
+   </form>
+
+   <p><b>Note:</b> The detalist tag is not supported in Safari prior version 12.1.</p>
+
+   <h2>Using the (output) Element</h2>
+
+   <p>The output element represents the result of a calculation.</p>
+
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" name="a" id="a" value="50">
+        100 +
+        <input type="number" name="b" id="b" value="50">
+        =
+        <output for="a b" name="x"></output><br><br>
+        <input type="submit">
+    </form>
+
+   <p><b>Note:</b> The output element is not supported in Edge prior version 13.</p>
+
+</body>
+</html>

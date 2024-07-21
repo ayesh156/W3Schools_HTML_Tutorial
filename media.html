@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+
+    <h1>HTML Video</h1>
+
+    <video width="400" controls>
+        <source src="videos/mov_bbb.mp4" type="video/mp4">
+        <source src="videos/mov_bbb.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <p>
+        Video courtesy of
+        <a href="https://www.bigbuckbunny.org/">Big Buck Bunny</a>
+    </p>
+
+    <h2>Example: Using JavaScript</h2>
+
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <button onclick="makeBig()">Big</button>
+        <br><br>
+        <video id="video1" width="420">
+            <source src="videos/mov_bbb.mp4" type="video/mp4">
+            <source src="videos/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+        function playPause() {
+            if(myVideo.paused)
+                myVideo.play();
+            else 
+                myVideo.pause();
+        }
+        function makeSmall() {
+            myVideo.width = "320";
+        }
+        function makeNormal() {
+            myVideo.width = "420";
+        }
+        function makeBig() {
+            myVideo.width = "560";
+        }
+    </script>
+
+    <h1>HTML (video) Tag</h1>
+
+    <p>Play a video:</p>
+
+    <video width="320" height="240" controls>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>src - Specifies the URL of the video file</h2>
+
+    <video width="320" height="240" src="videos/movie.mp4" controls>
+        Your browser does not support the video tag.
+    </video>
+
+    <p><b>Note:</b> The .ogg fileformat is not supported in old IE and Safari.</p>
+
+    <h2>width - Sets the width of the video player</h2>
+
+    <video width="320" height="240" controls>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>height - Sets the height of the video player</h2>
+
+    <video width="320" height="240" controls>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2></h2>
+
+    <h2>controls - Specifies that video controls should be displayed (such as a play/pause button etc).</h2>
+
+    <video width="320" height="240" controls>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>muted - Specifies that the audio output of the video should be muted</h2>
+
+    <video width="320" height="240" controls muted>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>autoplay - Specifies that the video will start playing as soon as it is ready</h2>
+
+    <video width="320" height="240" controls muted autoplay>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>loop - Specifies that the video will start over again, every time it is finished</h2>
+
+    <video width="320" height="240" controls loop>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>poster - Specifies images to be shown while the video is downloading, or until the user hits the play button</h2>
+
+    <video width="320" height="240" poster="images/green.jpg" controls>
+        <source src="videos/movie.mp4" type="video/mp4">
+        <source src="videos/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>HTML (source) Tag</h1>
+
+    <p>An audio player with two source files. The browser will choose the first (source) it supports:</p>
+
+    <audio controls>
+        <source src="audios/horse.ogg" type="audio/ogg">
+        <source src="audios/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>srcset - Required when (source) is used in (picture). Specifies the URL of the image to use in different situations.</h2>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="images/pink_flowers.jpg">
+        <source media="(min-width: 450px)" srcset="images/white_flower.jpg">
+        <img src="images/orange_flowers.jpg" alt="Flowers" style="width: auto;">
+    </picture>
+
+    <h2>media - Accepts any valid media query that would normally be defined in a CSS</h2>
+
+    <p>A (picture) element with two source files, and a fallback image:</p>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="images/pink_flowers.jpg">
+        <source media="(min-width: 450px)" srcset="images/white_flower.jpg">
+        <img src="images/orange_flowers.jpg" alt="Flowers" style="width: auto;">
+    </picture>
+
+    <h2>src - Required when (source) is used in (audio) and (video). Specifies the URL of the media file</h2>
+
+    <p>An audio player with two source files. The browser should choose which fill (it any) it has support for:</p>
+
+    <audio controls>
+        <source src="audios/horse.ogg" type="audio/ogg">
+        <source src="audios/horse.mp3" type="audio/mp3">
+        Your browser does not support the audio tag
+    </audio>
+
+    <h2>type - Specifies the MIME-type of the resource</h2>
+
+    <audio controls>
+        <source src="audios/horse.ogg" type="audio/ogg">
+        <source src="audios/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag
+    </audio>
+
+    <h1>HTML Plug-ins</h1>
+
+    <p>The (object) element defines an embedded object with an HTML document</p>
+
+    <object data="images/pink_flowers.jpg"></object>
+
+    <h1>HTML YouTube Videos</h1>
+
+    <h2>Playing a YouTube Video in HTML</h2>
+
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="420" height="345"></iframe>
+
+    <h2>YouTube Autoplay + Mute</h2>
+
+    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" width="420" height="345"></iframe> -->
+
+    <h2>YouTube Loop</h2>
+
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1" width="420" height="345"></iframe>
+
+    <h2>YouTube Controls</h2>
+
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0" width="420" height="345"></iframe>
+
+    
+    
+</body>
+</html>

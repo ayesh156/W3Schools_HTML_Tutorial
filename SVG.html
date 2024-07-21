@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+<body>
+    <h1>HTML SVG Graphics</h1>
+
+    <h2>SVG Circle</h2>
+    
+    <SVG width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle> <!-- cx, cy -> x and y coordinates of the center of the circle. -->
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG Rectangle</h2>
+
+    <h3>Example 1</h3>
+
+    <SVG width="400" height="100">
+        <rect width="300" height="100" style="fill: rgb(0, 0, 255);stroke-width: 3;stroke: rgb(0, 0, 0);"></rect>
+    </SVG>
+
+    <h3>Example 2 - new attributes</h3>
+
+    <SVG width="400" height="180">
+        <rect x="20" y="20" width="150" height="150" style="fill: blue;stroke: pink;stroke-width: 5;fill-opacity: 0.1;stroke-opacity: 0.9;"></rect> <!-- x -> left position of the rectangle / y -> top positon of the rectangle / legal opacity range: 0 to 1 -->
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 3 - opacity for the whole element</h3>
+
+    <SVG width="400" height="180">
+        <rect x="50" y="20" width="150" height="150" style="fill: blue;stroke: pink;stroke-width: 5;opacity: 0.5;"></rect> <!-- legal range -> 0 to 1 -->
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 4 - rectangle with rounded corners</h3>
+
+    <SVG width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill: red;stroke: black;stroke-width: 5;opacity: 0.5;"></rect> <!-- rx and ry -> rounds the corners of the rectangle -->
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG Logo</h2>
+
+    <SVG width="500" height="130">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: rgb(255, 255, 0);stop-opacity: 1;"></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 0, 0);stop-opacity: 1;"></stop>
+            </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)"></ellipse>
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Ellipse</h2>
+
+    <h3>Example 1 - create an ellipse</h3>
+
+    <SVG width="500" height="150">
+        <ellipse cx="200" cy="80" rx="100" ry="50" style="fill: yellow;stroke: purple;stroke-width: 2;"></ellipse> <!-- cx -> x coordinate of the center of the ellipse / cy -> y coordinates of the center of the ellipse / rx -> horizontal radius / ry -> vertical radius -->
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 2 - Create three ellipse on top of each other</h3>
+
+    <SVG width="500" height="150">
+        <ellipse cx="240" cy="100" rx="220" ry="30" style="fill: purple;"></ellipse>
+        <ellipse cx="220" cy="70" rx="190" ry="25" style="fill: lime;"></ellipse>
+        <ellipse cx="210" cy="45" rx="170" ry="20" style="fill: yellow;"></ellipse>
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 3 - Combines two ellipses (one yellow and one white)</h3>
+
+    <SVG width="500" height="100">
+        <ellipse cx="240" cy="50" rx="220" ry="30" style="fill: yellow;"></ellipse>
+        <ellipse cx="240" cy="50" rx="190" ry="20" style="fill: white;"></ellipse>
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG Line - (line)</h2>
+
+    <SVG width="500" height="210">
+        <line x1="0" y1="0" x2="200" y2="200" style="stroke: rgb(255, 0, 0);stroke-width: 2;"></line><!-- x1 -> start of the line on the x-axis / y1 -> start of the line on the y-axis / x2 -> end of the line on the x-axis / y2 -> end of the line on the y-axis -->
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG (polygon)</h2>
+
+    <h3>Example 1 - Creates a polygon with three sides</h3>
+
+    <SVG width="500" height="210">
+        <polygon points="200,10 250,190 160,210" style="fill: lime;stroke: purple;stroke-width: 2;"></polygon> <!-- The points attribute defines the x and y coordinates for each corner of the polygon -->
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example - Creates a polygon with four sides</h3>
+
+    <SVG width="500" height="250">
+        <polygon points="220,10 300,210 160,250 123,234" style="fill: lime;stroke: purple;stroke-width: 2;"></polygon>
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 3 - Create a star with fill rule property "nonzero"</h3>
+
+    <SVG width="500" height="210">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill: lime;stroke: purple;stroke-width: 5;fill-rule: nonzero;"></polygon>
+        Your browser does not support inline SVG.
+    </SVG>  
+
+    <h2>Example 4 - Create a star with fill rule property "evenodd"</h2>
+
+    <SVG width="500" height="210">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill: lime;stroke: purple;stroke-width: 5;fill-rule: evenodd;"></polygon>
+        Your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG (polyline)</h2>
+
+    <h3>Example 1 - Create any shape that consists of only straight lines (that is connected at several points)</h3>
+
+    <SVG width="500" height="200">
+        <polyline points="20,20 40,25 60,40 80,120 120,140 200,180" style="fill: none;stroke: black;stroke-width: 3;"></polyline>
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 2 - only straight lines</h3>
+
+    <SVG width="500" height="180">
+        <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill: white;stroke: red;stroke-width: 3;"></polyline>
+        Your browser does not support the inline SVG
+    </SVG>
+
+    <h2>SVG Path - (path)</h2>
+
+    <!--
+        Commands are available for path data
+        M = moveto
+        L = Lineto
+        H = horizontal lineto
+        V = vertical lineto
+        C = curveto
+        S = smooth curveto
+        Q = quadratic Bezier curve
+        T = smooth quadratic Bezier curveto
+        A = elliptical Arc
+        Z = closepath
+    -->
+
+    <h3>Example 1</h3>
+
+    <SVG width="400" height="210">
+        <path d="M150 0 L75 200 L225 200 Z"></path>
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 2 - Creates a quadratic Bezier curve</h3>
+
+    <SVG width="450" height="400">
+        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none"></path>
+        <path id="lineAB" d="M 250 50 l 150 300" stroke="red" stroke-width="3" fill="none"></path>
+        <path d="M 175 200 l 150 0" stroke="green" stroke-width="3" fill="none"></path>
+        <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none"></path><!-- cpx -> x-coordinate of the Bezier control point / cpy -> y-coordinate of the Bézier control point / x -> x-coordinate of the ending point / y -> y-coordinate of the ending point -->
+        <!-- Mark relevant points -->
+        <g stroke="black" stroke-width="3" fill="black">
+            <circle id="pointA" cx="100" cy="350" r="3"></circle>
+            <circle id="pointB" cx="250" cy="50" r="3"></circle>
+            <circle id="pointC" cx="400" cy="350" r="3"></circle>
+        </g>
+        <!-- Label the points -->
+        <g font-size="30" font-family="sans-sarif" fill="black" stroke="none" text-anchor="middle">
+            <text x="100" y="350" dx="-30">A</text>
+            <text x="250" y="50" dx="-20">B</text>
+            <text x="400" y="350" dx="30">C</text>
+        </g>
+        Your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG (text)</h2>
+
+    <h3>Example 1 - Write a text:</h3>
+
+    <SVG height="30" width="200">
+        <text x="0" y="15" fill="red">I love SVG!</text>
+        Sorry, your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 2 - Rotate the text:</h3>
+
+    <SVG height="60" width="200">
+        <text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love SVG!</text>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 3 - Text on several lines</h3>
+
+    <SVG height="90" width="200">
+        <text x="10" y="20" fill="red">Several lines:
+            <tspan x="10" y="45">First line:</tspan>
+            <tspan x="10" y="70">Second line:</tspan>
+        </text>
+        Sorry, your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 4 - Text as a link (with the (a) element)</h3>
+
+    <SVG width="200" height="30" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
+            <text x="10" y="15" fill="red">I love SVG!</text>
+        </a>
+        Sorry, your browser does not support inline SVG.
+    </SVG>
+
+    <h2>SVG stroke Properties</h2>
+
+    <h3>SVG stroke Property - defines the color of a line, text or outline of an element:</h3>
+
+    <SVG width="300" height="80">
+        <g fill="none">
+            <path stroke="red" d="M5 20 l215 0"></path>
+            <path stroke="black" d="M5 40 l215 0"></path>
+            <path stroke="blue" d="M5 60 l215 0"></path>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>SVG stroke-width Property - defines the thickness of a line, text or outline of an element:</h3>
+
+    <SVG width="300" height="80">
+        <g fill="none" stroke="black">
+            <path stroke-width="2" d="M5 20 l215 0"></path>
+            <path stroke-width="4" d="M5 40 l215 0"></path>
+            <path stroke-width="6" d="M5 60 l215 0"></path>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>SVG stroke-linecap property - defines different types of endings to an open path:</h3>
+
+    <SVG width="300" height="80">
+        <g fill="none" stroke="black" stroke-width="6">
+            <path stroke-linecap="butt" d="M5 20 l215 0"></path>
+            <path stroke-linecap="round" d="M5 40 l215 0"></path>
+            <path stroke-linecap="square" d="M5 60 l215 0"></path>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>SVG stroke-dasharray Property - create dashed lines:</h3>
+
+    <SVG width="300" height="80">
+        <g fill="none" stroke="black" stroke-width="4">
+            <path stroke-dasharray="5,5" d="M5 20 l215 0"></path>
+            <path stroke-dasharray="10,10" d="M5 40 l215 0"></path>
+            <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0"></path>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Blur Effects</h2>
+
+    <h3>Example 1 - The (feGaussianBlur) element is used to create blur effects:</h3>
+
+    <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support SVG filters</p>
+
+    <SVG width="110" height="110">
+        <defs>
+            <filter id="f1" x="0" y="0">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15"></feGaussianBlur>
+            </filter>
+        </defs>
+        <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)"></rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Drop Shadows - (feOffset)</h2>
+
+    <h3>Example 1 - offsets a rectangle (with (feoffset)), then blend the original on top of the offset image (with (feBlend))</h3>
+
+    <SVG width="120" height="120">
+        <defs>
+            <filter id="f2" x="0" y="0" width="200%" height="200%">
+                <feoffSet result="offOut" in="SourceGraphic" dx="20" dy="20"></feoffSet>
+                <feBlend in="SourceGraphic" in2="offOut" mode="normal"></feBlend>
+            </filter>
+        </defs>
+        <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f2)"></rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 2 - The offset image can be blurred (with (feGaussianBlur))</h3>
+
+    <SVG width="140" height="140">
+        <defs>
+            <filter id="f3" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20"></feOffset>
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+        </defs>
+        <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f3)"></rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 3 - Make the shadow black</h3>
+
+    <SVG width="140" height="140">
+        <defs>
+            <filter id="f4" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20"></feOffset>
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+        </defs>
+        <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f4)"></rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 4 - Treat the shadow as a color</h3>
+
+    <SVG width="140" height="140">
+        <defs>
+            <filter id="f5" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20"></feOffset>
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"></feColorMatrix>
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10"></feGaussianBlur>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+        </defs>
+        <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f5)"></rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Gradients - Linear</h2>
+
+    <h3>Example 1 - Define an ellipse with a horizontal linear gradient from yellow to red:</h3>
+
+    <SVG height="150" width="400">
+        <defs>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255, 255, 0);stop-opacity: 1;"></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 0, 0);stop-opacity: 1;"></stop>
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)"></ellipse>
+        Sorry, your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Example 2 - Define an ellipse with a vertical linear gradient from yellow to red:</h3>
+
+    <SVG width="400" height="150">
+        <defs>
+            <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(255, 255, 0);stop-opacity: 1;"></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 0, 0);stop-opacity: 1;"></stop>
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad3)"></ellipse>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Example 3 - Define an ellipse with a horizontal linear gradient from yellow to red, and add a text inside the ellipse:</h3>
+
+    <SVG height="150" width="400">
+        <defs>
+            <linearGradient id="grad4" x1="0%" y2="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: rgb(255, 255, 0);stop-opacity: 1;"></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 0, 0);stop-opacity: 1;"></stop>
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad4)"></ellipse>
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="150" y="86">SVG</text>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Gradients - Radial</h2>
+
+    <h3>Example 1 - Define an ellipse with a radial gradient from white to blue:</h3>
+
+    <SVG width="400" height="150">
+        <defs>
+            <radialGradient id="grad5" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color: rgb(255, 255, 255);stop-opacity: 0;"></stop>
+                <stop offset="100%" style="stop-color: rgb(0, 0, 255);stop-opacity: 1;"></stop>
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad5)"></ellipse>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>Example 2 - Define another ellipse with a radial gradient from white to green:</h2>
+
+    <SVG height="150" width="400">
+        <defs>
+            <radialGradient id="grad6" cx="20%" cy="30%" r="30%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color: rgb(255, 255, 255);stop-opacity: 0;"></stop>
+                <stop offset="100%" style="stop-color: rgb(0, 255, 0);stop-opacity: 1;"></stop>
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad6)"></ellipse>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h1>SVG Example</h1>
+
+    <h2>SVG Filters</h2>
+
+    <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support SVG filters.</p>
+
+    <h3>A feBlend filter</h3>
+
+    <SVG width="400" height="550">
+        <defs>
+            <linearGradient id="myGradient" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="300" y2="0">
+                <stop offset="0" style="stop-color: #000000" />
+                <stop offset=".33" style="stop-color: #ffffff" />
+                <stop offset=".67" style="stop-color: #ffff00" />
+                <stop offset="1" style="stop-color: #808080" />
+            </linearGradient>
+            <filter id="normal">
+                <feBlend mode="normal" in="SourceGraphic" />
+            </filter>
+            <filter id="multiply">
+                <feBlend mode="multiply" in="SourceGraphic" />
+            </filter>
+            <filter id="screen">
+                <feBlend mode="screen" in="SourceGraphic" />
+            </filter>
+            <filter id="darken">
+                <feBlend mode="darken" in="SourceGraphic" />
+            </filter>
+            <filter id="lighten">
+                <feBlend mode="lighten" in="SourceGraphic" />
+            </filter>
+        </defs>
+        <g style="enable-background: new">
+            <rect x="40" y="20" width="300" height="450" style="fill:url(#myGradient)"></rect>
+            <g style="font-size:75px;fill:#888888;fill-opacity:.6">
+                <text x="50" y="90" filter="url(#normal)">Normal</text>
+                <text x="50" y="180" filter="url(#multiply)">Multiply</text>
+                <text x="50" y="270" filter="url(#screen)">Screen</text>
+                <text x="50" y="360" filter="url(#darken)">Darken</text>
+                <text x="50" y="450" filter="url(#lighten)">Lighten</text>
+            </g>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Filter 1</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Filter 2</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter2" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter2)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Filter 3</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter3" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+                    <fePointLight x="-5000" y="-10000" z="20000" />
+                </feSpecularLighting>
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter3)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Filter 4</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter4" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+                    <fePointLight x="-5000" y="-10000" z="20000" />
+                </feSpecularLighting>
+                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter4)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Filter 5</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter5" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+                    <fePointLight x="-5000" y="-10000" z="20000" />
+                </feSpecularLighting>
+                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+                <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter5)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG.
+    </SVG>
+
+    <h3>Filter 6</h3>
+
+    <SVG width="400" height="200">
+        <defs>
+            <filter id="myFilter6" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#dddddd" result="specOut">
+                    <fePointLight x="-5000" y="-10000" z="20000" />
+                </feSpecularLighting>
+                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+                <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+                <feMerge>
+                    <feMergeNode in="offsetBlur" />
+                    <feMergeNode in="litPaint" />
+                </feMerge>
+            </filter>
+        </defs>
+        <rect x="1" y="1" width="198" height="118" fill="#cccccc" />
+        <g filter="url(#myFilter6)">
+            <path fill="none" stroke="#D90000" stroke-width="10" d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z" />
+            <text fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" x="52" y="76">SVG</text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h2>SVG Misc</h2>
+
+    <h3>Rectangle that repeatedly fade away over 5 seconds</h3>
+
+    <SVG width="400" height="300">
+        <rect x="20" y="20" width="250" height="250" style="fill: blue;">
+            <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+        </rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>A growing rectangle that will change color</h3>
+
+    <SVG width="500" height="300">
+        <rect id="rec" x="300" y="100" width="300" height="100" style="fill:lime;">
+            <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0" />
+            <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" />
+            <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" />
+            <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" />
+            <animate attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="6s" fill="freeze" />
+        </rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Three rectangle that will change color</h3>
+
+    <SVG width="500" height="300">
+        <rect x="10" y="20" width="90" height="60">
+            <animate id="a1" attributeName="fill" from="red" to="blue" dur="3s" fill="freeze" />
+        </rect>
+        <rect x="10" y="120" width="90" height="60">
+            <animate id="a2" attributeName="fill" from="blue" to="yellow" begin="a1.end" dur="3s" fill="freeze" />
+        </rect>
+        <rect x="10" y="220" width="90" height="60">
+            <animate  id="a3" attributeName="fill" from="yellow" to="green" begin="a2.end" dur="3s" fill="freeze" />
+        </rect>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Move text along a motion path</h3>
+
+    <SVG width="500" height="250">
+        <g transform="translate(50,50)">
+            <text id="TextElement" x="0" y="50" style="font-family: Verdana;font-size: 24;">
+                It's SVG!
+                <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze" />
+            </text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Move, rotate, and scale text along a motion path</h3>
+
+    <SVG width="600" height="260">
+        <g transform="translate(100,100)">
+            <text id="TextElement" x="0" y="0" style="font-family: Verdana;font-size: 24;visibility: hidden">It's SVG!
+                <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s"dur="5s" fill="freeze" />
+                <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" />
+                <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" /> 
+            </text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Move, rotate and scale text along a motion path + a growing rectangle that will change color</h3>
+
+    <SVG width="600" height="260">
+        <rect id="rec" x="300" y="100" width="300" height="100" style="fill: lime">
+            <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0" />
+            <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" />
+            <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" />
+            <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="000" to="300" />
+            <animate attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze" />
+        </rect>
+        <g transform="translate(100,100)">
+            <text id="TextElement" x="0" y="0" style="font-family: Verdana;font-size: 24;visibility: hidden">It's SVG!
+                <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" />
+                <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+                <animate attributeName="fill" attributeType="CSS" from="red" to="blue" begin="1s" dur="5s" fill="freeze" />
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" />
+                <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" />
+            </text>
+        </g>
+        Sorry, your browser does not support inline SVG
+    </SVG>
+
+    <h3>Rotating ellipses</h3>
+
+    <SVG width="100%" height="300">
+        <g id="R1" transform="translate(250, 250)">
+            <ellipse rx="100" ry="0" opacity=".3">
+                <animateTransform attributeName="transform" type="rotate" dur="7s" from="0" to="360" repeatCount="indefinite" />
+                <animate attributeName="cx" dur="8s" values="-20; 220; -20" repeatCount="indefinite" />
+                <animate attributeName="ry" dur="3s" values="10; 60; 10" repeatCount="indefinite" />
+            </ellipse>
+        </g>
+        <use xlink:href="#R1" transform="rotate(72 390 150)" />
+        <use xlink:href="#R1" transform="rotate(144 390 150)" />
+        <use xlink:href="#R1" transform="rotate(216 390 150)" />
+        <use xlink:href="#R1" transform="rotate(288 390 150)" />
+    </SVG>
+
+    
+</body>
+</html>

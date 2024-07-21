@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+    <!-- An image height and width using both -->
+    <!-- <style>
+        img {
+            width: 100%;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>HTML Images</h1>
+
+    <h2>An image</h2>
+
+    <h3>Italian Trulli</h3>
+
+    <img src="images/pic_trulli.jpg" alt="Italian Trulli" style="width: 100%;">
+
+    <h2>An image height and width using attributes</h2>
+
+    <p>Here we specify the width and height of an image with the width and height attributes:</p>
+    <img src="images/img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+    <h2>An image height and width using CSS</h2>
+
+    <p>Here we use the style attribute to specify the width and height of an image:</p>
+    <img src="images/img_girl.jpg" alt="Girl in a jacket" style="width: 500px;height: 600px;">
+
+    <h2>An image height and width using both</h2>
+
+    <h3>Width/Height Attributes or Style?</h3>
+
+    <p>The first image uses the width attribute (set to 128 pixels), but the style in the head section overrides it, and sets the width to 100%</p>
+    <img src="images/html5.gif" alt="html5 icon" width="128" height="128">
+
+    <p>The second image uses the style attribute to set the width to 128 pixels, this will not be overriden by the style in the head section:</p>
+    <img src="images/html5.gif" alt="html5 icon" style="width: 128px;height: 128px;">
+
+    <h2>An image in another folder</h2>
+
+    <p>It is common to store images in a sub-folder. You must then include the folder name in the src attribute:</p>
+    <img src="images/html5.gif" alt="html5 icon" style="width: 128px;height: 128px;">
+
+    <h2>An image with a broken link</h2>
+
+    <p>If a browser cannot find an images, it will display the alternate text:</p>
+    <img src="images/wrongname.gif" alt="html5 icon">
+
+    <h2>An image on another server</h2>
+
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="html examples" style="width: 104px;height: 142px;">
+
+    <h2>Using an image as a link</h2>
+
+   <a href="Examples.html" target="_blank">
+       <img src="images/smiley.gif" alt="html5 examples" style="width: 50px;height: 50px;">
+   </a>
+
+    <h2>A moving image</h2>
+
+    <img src="images/programming.gif" alt="computer man" style="width: 50px;height: 50px;">
+
+    <h2>An image map with clickable regions</h2>
+
+    <p>Click on the sun or one of the planets to watch it closer:</p>
+    <img src="images/planets.gif" alt="planet" usemap="#planetmap" style="width: 142px;height: 126px;">
+    <map name="planetmap">
+        <area shape="rect" coords="2,1,82,125" href="images/sun.gif" alt="sun">
+        <area shape="circle" coords="90,58,3" href="images/mercur.gif" alt="mercury">
+        <area shape="circle" coords="125,59,8" href="images/venus.gif" alt="venus">
+    </map>
+
+    <p>croissant in the image become a clickable link</p>
+    <img src="images/frenchfood.jpg" alt="frenchfood" usemap="#foodmap" style="width: 450px;height: 675px;">
+    <map name="foodmap">
+        <area shape="poly" coords="40,310,38,292,42,266,42,247,52,228,64,212,82,193,96,173,106,157,124,149,132,136,141,121,154,117,166,117,177,116,184,124,188,139,202,153,202,175,204,202,206,220,191,270,176,273,170,298,158,298,154,309,146,321,134,331,122,338,101,352,84,355,68,355,50,345,36,328" href="images/croissant.jpg" alt="croissant">
+    </map>
+
+    <h2>A floating image</h2>
+
+    <p><strong>Floating the image to the right:</strong></p>
+    <p><img src="images/smiley.gif" alt="smiley" style="float: right;width: 42px;height: 42px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusamus consequuntur est quos ipsa dolor! Porro architecto voluptas fugiat eaque!</p>
+    
+    <p><strong>Float the image to the left:</strong></p>
+    <p><img src="images/smiley.gif" alt="smiley" style="float: left;width: 42px;height: 42px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores perferendis qui totam error, id dolore blanditiis. Consequuntur perferendis qui nobis?</p>
+
+    <h2>The HTML (picture) Element</h2>
+    <picture>
+        <source media="(min-width: 650px)" srcset="images/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="images/img_car.jpg">
+        <img src="images/img_girl.jpg" style="width:auto;">
+      </picture>
+
+    <p>Resize the browser to see different versions of the picture loading at different viewport sizes.The browser looks for the first source element where the media query matches the user's current viewport width,
+    and fetches the image specified in the srcset attribute.</p>
+
+    <p>The img element is required as the last child tag of the picture declaration block.
+    The img element is used provide backward compatibility for browsers that do not support the picture element, or if none of the source tag matched.
+    </p>
+
+    <p><strong>Note: </strong>The picture element is not supported in IE12 and erlier or Safari 9.0 and earlier</p>
+    
+</body>
+</html>

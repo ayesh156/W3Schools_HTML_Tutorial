@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <!-- A table with borders -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style> -->
+    
+    <!-- A table with collapsed borders -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style> -->
+
+    <!-- A table with cell padding -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style> -->
+    <!-- A table with left-aligned headings -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+        }
+    </style> -->
+
+    <!-- Horizontal/Vertical table headings -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: left;
+        }
+        th {
+            text-align: left;
+        }
+    </style> -->
+
+    <!-- To add a caption to a table, use the caption tag -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style> -->
+
+    <!-- Table cells that span more than one column -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style> -->
+
+    <!-- Table cells that span more than one row -->
+    <!-- <style>
+        table, td , th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 5px;
+            text-align: left;
+        }
+    </style> -->
+
+    <!-- A table with cell spacing -->
+    <!-- <style>
+        table, td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        table {
+            border-spacing: 10px;
+        }
+    </style> -->
+    
+    <!-- A table with HTML tags inside -->
+    <!-- <style>
+        table,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+        }
+    </style> -->
+
+    <!-- Tables width different style using id I -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        #t01 {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+    </style> -->
+
+    <!-- Tables with different style using id II -->
+    <!-- <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style> -->
+
+    <!-- Tables with different style using class I   -->
+    <!-- <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        table.name {
+            background-color: greenyellow;
+        }
+    </style> -->
+
+    <!-- Tables with different style using class II -->
+    <!-- <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        table.name2 tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+        table.name2 th {
+            background-color: blue;
+            color: yellow;
+            text-align: right;
+        }
+        h1 {
+            text-align: right;
+        }
+    </style> -->
+    
+</head>
+<body>
+    <h1>HTML Tables</h1>
+
+    <h2>Basic HTML tables</h2>
+
+    <p>HTML tables start with a table tag.</p>
+    <p>Table rows start with a tr tag.</p>
+    <p>Table data start with a td tag.</p>
+
+    <hr>
+    <h3>1 Column:</h3>
+    <table>
+        <tr>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>1 Row and 3 Columns:</h3>
+    <table>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>3 Rows and 3 Columns:</h3>
+    <table>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>500</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>700</td>
+            <td>800</td>
+            <td>900</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2>A table with borders</h2>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <h2>A table with collapsed borders</h2>
+
+    <p>If you want the borders to collapse into one border, add the CSS border-collapse property</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <h2>A table with cell padding</h2>
+
+    <p>Cell padding specifies the space between the cell content and its borders.</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+    
+    <h2>A table with left-aligned headings</h2>
+
+    <p>To left-align the table headings, use the CSS text-align property</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>Horizontal/Vertical table headings</h2>
+
+    <h2>Horizontal headings:</h2>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>555 77 854</td>
+        </tr>
+    </table>
+
+    <h2>Vertical headings:</h2>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th>Telephone:</th>
+            <td>555 77 854</td>
+        </tr>
+    </table>
+
+    <h2>A table with a caption</h2>
+
+    <p>To add a caption to a table, use the caption tag</p>
+    <table style="width: 100%;">
+        <caption>Monthly savings</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>February</td>
+            <td>$50</td>
+        </tr>
+    </table>
+    
+    <h2>Table cells that span more than one column</h2>
+
+    <p>To make a cell span more than one column, use the colspan attribute.</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>555 77 854</td>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+    <h2>Table cells that span more than one row</h2>
+
+    <p>To make a cell span more than one row, use the rowspan attribute</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>555 77 854</td>
+        </tr>
+        <tr>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+    <h2>A table with cell spacing</h2>
+
+    <p>Border spacing specifies the space between the cells</p>
+    <table style="width: 100%;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>A table with HTML tags inside</h2>
+    <table>
+        <tr>
+            <td>
+                <p>This is a paragraph</p>
+                <p>This is another paragraph</p>
+            </td>
+            <td>
+                This cell contains a table:
+                <table>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                This cell contains a list
+                <ul>
+                    <li>apples</li>
+                    <li>bananas</li>
+                    <li>pineapples</li>
+                </ul>
+            </td>
+            <td>HELLO</td>
+        </tr>
+    </table>
+
+    <h2>Tables with different style using id I</h2>
+    <table id="t01">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>Tables with different style using id II</h2>
+    <table id="t02">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>Tables with different style using class I</h2>
+    <table class="name">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>Tables with different style using class II</h2>
+    <table class="name2">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+</body>
+</html>
